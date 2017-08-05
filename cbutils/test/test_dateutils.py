@@ -1,6 +1,7 @@
-from unittest import TestCase
 from datetime import date
-from dateutils import DateInterval, get_last_friday
+from unittest import TestCase
+
+from cbutils.dateutils import DateInterval, get_last_friday
 
 
 class DateIntervalTest(TestCase):

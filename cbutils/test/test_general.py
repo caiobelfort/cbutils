@@ -1,8 +1,9 @@
 from unittest import TestCase
-import pandas as pd
-import numpy as np
 
-from general import split
+import numpy as np
+import pandas as pd
+
+from cbutils.general import split
 
 
 class SplitTest(TestCase):
