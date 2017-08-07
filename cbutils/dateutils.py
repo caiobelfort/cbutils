@@ -90,5 +90,7 @@ class DateInterval:
         return n_days
 
 
-def get_last_friday(day):
-    return day - timedelta(days=day.weekday() +3)
+def get_last_friday(day=None):
+    if day is None:
+        day = date.today()
+    return day - timedelta(days=day.weekday() + 3)
