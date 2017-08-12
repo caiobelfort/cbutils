@@ -91,6 +91,21 @@ class DateInterval:
 
 
 def get_last_friday(day=None):
+    """
+    Get last friday in reference of the day passed as parameter
+
+    Parameters
+    ----------
+    day: datetime.date
+    Returns
+    -------
+    datetime.date
+    """
+
     if day is None:
         day = date.today()
-    return day - timedelta(days=day.weekday() + 3)
+    days_to_subtract = day.weekday() + 3
+    if days_to_subtract > 7:
+        days_to_subtract -= 7
+    last_friday = day - timedelta(days=days_to_subtract)
+    return last_friday
