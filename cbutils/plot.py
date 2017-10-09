@@ -1,6 +1,6 @@
 
 
-def set_pct_to_bars(ax, bars=None, **kwargs):
+def set_pct_to_bars(ax, total=None, bars=None, **kwargs):
     """
 
     Set percentage text to bars.
@@ -26,7 +26,8 @@ def set_pct_to_bars(ax, bars=None, **kwargs):
     # the bars of count exists
     patches = bars if bars else ax.patches
 
-    total_count = sum([p.get_height() for p in patches])
+    if total is None or total <= 0:
+        total = sum([p.get_height() for p in patches])
 
     # Setup some keywords parameter if exists else set default
     x_offset = kwargs['x_offset'] if 'x_offset' in kwargs else 0
@@ -49,7 +50,7 @@ def set_pct_to_bars(ax, bars=None, **kwargs):
         ax.text(
             (x + x_offset) * x_factor,
             (y + y_offset) * y_factor,
-            fmt % (100 * y / total_count),
+            fmt % (100 * y / total),
             va=va,
             ha=ha,
             fontsize=fontsize,
