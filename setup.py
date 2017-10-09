@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='cbutils',
-    version='0.01',
+    version='0.012a',
     description='My utilities library',
     url='https://github.com/caiobelfort/cbutils',
     author='caiobelfort',
