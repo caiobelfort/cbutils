@@ -35,7 +35,7 @@ def set_pct_to_bars(ax, total=None, bars=None, **kwargs):
     x_factor = kwargs['x_factor'] if 'x_factor' in kwargs else 1
     y_factor = kwargs['y_factor'] if 'y_factor' in kwargs else 1
     fmt = kwargs['fmt'] if 'fmt' in kwargs else '%.2f%%'
-    va = kwargs['va'] if 'va' in kwargs else 'center'
+    va = kwargs['va'] if 'va' in kwargs else 'bottom'
     ha = kwargs['ha'] if 'ha' in kwargs else 'center'
     fontsize = kwargs['fontsize'] if 'fontsize' in kwargs else 12
     fontweight = kwargs['fontweight'] if 'fontweight' in kwargs else 'normal'
