@@ -1,5 +1,3 @@
-
-
 def set_pct_to_bars(ax, total=None, bars=None, **kwargs):
     """
 
@@ -19,7 +17,6 @@ def set_pct_to_bars(ax, total=None, bars=None, **kwargs):
     matplotlib.axes.Axes
 
     """
-
 
     # If bar patches is not passed uses patches found in axes.
     # This propably leads to weird text if other patches besides
@@ -41,9 +38,7 @@ def set_pct_to_bars(ax, total=None, bars=None, **kwargs):
     fontweight = kwargs['fontweight'] if 'fontweight' in kwargs else 'normal'
     rotation = kwargs['rotation'] if 'rotation' in kwargs else 'horizontal'
 
-
     for p in patches:
-
         y = p.get_height()  # Same as value
         x = p.get_x() + p.get_width() / 2  # Center of the bar
 
